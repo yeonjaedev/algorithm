@@ -16,7 +16,11 @@ else:
 arr = ['3424',1,'string']
 for x in arr:
     print(x)
-
+test = ['mon','tue','wed','thi','fri','sat','sun']
+print(test[3:6])
+for i in range(len(test)):
+    print(i)
+    print(test[i])
 def func (a):
     return a+' is Happy'
 print(func('yeonjae'))
