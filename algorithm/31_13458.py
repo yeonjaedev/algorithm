@@ -3,11 +3,9 @@
 # python 올림
 
 import math
-print(math.ceil(0/3))
-print(math.ceil(-5/2))
 n = int(input())
 a = list(map(int,input().split()))
-b,c = map(int,input().split())
+fgfgb,c = map(int,input().split())
 
 res = n
 for i in range(len(a)):
