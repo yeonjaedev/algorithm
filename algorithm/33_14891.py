@@ -11,6 +11,7 @@ cmd = []
 for _ in range(cnt):
     cmd.append(list(map(int,input().split())))
 # 시계방향 회전
+chk = [False,False,False,False]
 def clockwise(num):
     if num < 0 or num > 3:
         return
@@ -24,13 +25,12 @@ def clockwise(num):
         k-=1
     arr[0] = tmp
     gears[num] = arr # 회전 후 gears에 세팅
+    chk[num] = True
     print(num+1, arr)
-    if num + 1 <= 3:
-        if gears[num+1][6] == gears[num][2] :
-            anticlockwise(num+1)
-    if num -1 >= 0:
-        if gears[num-1][2] == gears[num][6] :
-            anticlockwise(num-1)
+    if num + 1 <= 3 and gears[num+1][6] == gears[num][2] and not chk[num+1]:
+        anticlockwise(num+1)
+    if num -1 >= 0 and gears[num-1][2] == gears[num][6] and not chk[num-1]:
+        anticlockwise(num-1)
 
 # 반시계 방향 회전
 def anticlockwise(num):
@@ -43,14 +43,15 @@ def anticlockwise(num):
     arr[len(arr)-1] = tmp
     gears[num] = arr # 회전 후 gears에 세팅
     print(num+1, arr)
-    if num + 1 <= 3:
-        if gears[num+1][6] == gears[num][2] :
-            clockwise(num+1)
-    if num -1 >= 0:
-        if gears[num-1][2] == gears[num][6] :
-            clockwise(num-1)
+    chk[num] = True
+
+    if num + 1 <= 3 and gears[num+1][6] == gears[num][2] and not chk[num+1]:
+        clockwise(num+1)
+    if num -1 >= 0 and gears[num-1][2] == gears[num][6]  and not chk[num-1]:
+        clockwise(num-1)
 
 for i in range(len(cmd)):
+    chk = [False,False,False,False]
     if cmd[i][1] == 1:
         clockwise(cmd[i][0]-1)
     else :
