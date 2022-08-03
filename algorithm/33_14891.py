@@ -12,6 +12,7 @@ for _ in range(cnt):
     cmd.append(list(map(int,input().split())))
 # 시계방향 회전
 chk = [False,False,False,False]
+
 def clockwise(num):
     if num < 0 or num > 3:
         return
