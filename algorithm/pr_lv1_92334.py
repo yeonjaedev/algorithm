@@ -1,7 +1,21 @@
 #https://school.programmers.co.kr/learn/courses/30/lessons/92334
 # LV1 신고결과받기
+
+#개선 코드
+def solution(id_list, report, k):
+    answer = [0] * len(id_list)
+    reports = {x : 0 for x in id_list} 
+    report = list(set(report)) # 중복 요소 제거 
+    for i in report:
+        reports[i.split()[1]]+=1 # 신고 당한 사람 count
+    for i in report:
+        if reports[i.split()[1]] >= k: # k 이상 신고당한 사람의 
+            answer[id_list.index(i.split()[0])] += 1 # 신고자 위치를 찾아 +1 해주기
+    return answer
+
 from collections import Counter
 
+#처음 코드
 def solution(id_list, report, k):
     answer = []
     cnt = []
@@ -51,16 +65,4 @@ def solution(id_list, report, k):
 #             answer[id_list.index(m.split()[0])] += 1
 #     return answer
 
-# # def solution(id_list, report, k):
-# #     answer = [0] * len(id_list)    
-# #     reports = {x : 0 for x in id_list}
-# #     print(reports)
-# #     print(set(report))
-# #     for r in set(report):
-# #         reports[r.split()[1]] += 1
-        
-# #     for r in set(report):
-# #         if reports[r.split()[1]] >= k:
-# #             answer[id_list.index(r.split()[0])] += 1
 
-# #     return answer
