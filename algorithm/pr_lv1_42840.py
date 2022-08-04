@@ -1,3 +1,6 @@
+# https://school.programmers.co.kr/learn/courses/30/lessons/42840
+# LV1 모의고사
+
 import numpy as np
 
 def solution(answers):
@@ -35,4 +38,3 @@ def solution(answers):
         if answer[i] == maxCnt:
             res.append(i+1)
     return res
-    
