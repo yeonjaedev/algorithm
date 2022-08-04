@@ -1,3 +1,6 @@
+# https://school.programmers.co.kr/learn/courses/30/lessons/77484
+# 로또의 최고순위와 최저순위
+
 def solution(lottos, win_nums):
     answer = [0,0]
     rank = list(range(6, 0, -1))
