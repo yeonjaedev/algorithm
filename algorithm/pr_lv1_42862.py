@@ -18,3 +18,7 @@ def solution(n, lost, reserve):
             answer+=1
     
     return answer
+a = 'WbsdfFFF _'
+a.lower()
+a = '12345678901234567'[0:15]
+print(a[0:14])
