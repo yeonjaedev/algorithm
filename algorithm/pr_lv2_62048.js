@@ -2,7 +2,7 @@
 // 멀쩡한 사각형
 // 그림 그려보기, 1씩 증가시키며 순차적으로 규칙찾기
 // 최대공약수 구하는 공식
-//test
+
 function solution(w, h) {
     return w*h-(w+h-gcd(w,h))
 }
