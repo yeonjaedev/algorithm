@@ -5,7 +5,7 @@ function solution(n, k) {
     var resultStr = '' // k진수로 바꾼 값
     const isPrime = (num) =>{
         if(num === 1 || num === 0) return false
-        for ( let i = 2 ; i < Math.sqrt(num+1) ; i ++) {
+        for ( let i = 2 ; i <= Math.sqrt(num) ; i ++) {
             if( num % i === 0) return false
         }
         return true
