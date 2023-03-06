@@ -5,13 +5,15 @@ const bfs = (graph,num) => {
     visited[num] = true
     while(queue){
         let out = queue.shift()
+        
         if(!out){
             return
         }
         console.log(out,' ')
+       
         graph[out].forEach(g=>{
             if(!visited[g]) {
-                queue.push(g)
+                queue.push(g) // 넣은 것은 어차피 방문할꺼니까 true로
                 visited[g] = true
             }
         })
