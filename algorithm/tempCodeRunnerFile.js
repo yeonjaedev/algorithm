@@ -1,2 +1,1 @@
-    // let dx = [1,0,-1,0]
-    // let dy = [0,-1,0,1]
+  console.log("*".repeat(i))
