@@ -1,1 +1,1 @@
-    // console.log(dp);
+console.log(res.join('\n').replaceAll(',',' '))
