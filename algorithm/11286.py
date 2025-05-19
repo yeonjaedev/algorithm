@@ -2,6 +2,7 @@ import heapq
 import sys
 
 input = sys.stdin.readline
+
 heap = []
 n = int(input())
 for i in range(n):
